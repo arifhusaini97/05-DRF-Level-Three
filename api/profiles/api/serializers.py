@@ -21,6 +21,8 @@ class ProfileAvatarSerializer(serializers.ModelSerializer):
 class ProfileStatusSerializer(serializers.ModelSerializer):
 
     user_profile = serializers.StringRelatedField(read_only=True)
+    created_by = serializers.StringRelatedField(read_only=True)
+    updated_by = serializers.StringRelatedField(read_only=True)
 
     class Meta:
         model = ProfileStatus
